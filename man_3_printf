@@ -10,20 +10,17 @@
 .SH SYNOPSIS
 #include "holberton.h"
 .br
-\fIint\fR
-.br
-.B printf (\fIconst\fR \fIchar\fR \fI*format\fR, \fI...\fR);
+\fIint\fR _printf (\fIconst\fR \fIchar\fR \fI*format\fR, \fI...\fR);
 
 .SH DESCRIPTION
-The
 .B_printf()
-produces output according to a format as described.
+Produces output according to format.
 
 .SH CONVERSION SPECIFIERS
-The conversion specifiers and their meanings are:
+Conversion specifiers and their meanings are:
 .TP
 .BR %c
-The  int argument is converted to an unsigned char
+Int argument is converted to an unsigned char.
 .TP
 .B %s
 The char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating NULL character, ('\0'), but it is not including; if a precision is specified, no more than the number specified are written.  If a precision is given, no null byte  need  be  present;  if the precision is not specified, or is greater than the size of the array, the array must contain a terminating null byte.
@@ -38,32 +35,32 @@ i The int argument is converted to signed decimal notation.
 d The int argument is converted to signed decimal notation.
 .TP
 .B %b
-d The int argument is converted to binary notation.
+d The unsigned int argument is converted to binary notation.
 
 .SH RETURN VALUE
-Upon successful return, this function returns the number of characters printed (not including the trailing `\\0' used to end output to strings).
+Upon successful printing, this function returns the number of characters printed (not including the trailing `\\0' used to end output to strings), otherwise returns -1.
 .SH EXAMPLES
 Use _printf to print a string with variables of different types
 
 #include "holberton.h"
 
-	  int main (void)
+int main (void)
+.TP
+{
+    int age = 43;
+    char *name = "Maria";
 
-	   {
+    _printf("She is %s and has %d years old", name, age);
 
-		int age = 43;
-char *name = maria;
-
-     	   _printf("She is %s and has %d years old", name, age);
-
-       	   		return (0);
-
-			}
+    return (0);
+.TP
+}
 
 .SH SEE ALSO
-printf , scanf
+printf(3)
 
 .SH BUGS
 No known bugs.
+
 .SH AUTHOR
 Maria Crespo, Jorge Ramirez.
