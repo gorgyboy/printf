@@ -1,7 +1,6 @@
 #include "holberton.h"
 #include <unistd.h>
 #include <string.h>
-#include <stdio.h>
 
 /**
  * print_char - Prints a character
@@ -94,6 +93,11 @@ int print_binary(va_list arg_list)
 	char buff[1024];
 
 	num = va_arg(arg_list, unsigned int);
+
+	if (num == 0)
+	{
+		return (_putchar('0'));
+	}
 
 	for (i = 0; num > 0; i++)
 	{
