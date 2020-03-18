@@ -1,25 +1,25 @@
-#**_printf**
-##**Project details**
+# **_printf**
+## **Project details**
 Recreate our own version of printf using C language.
 
-##**Function prototype**
+## **Function prototype**
 int _printf(const char *format, ...);
 
-##**Background**
+## **Background**
 A standard printf is a built-in C function in stdio.h standard library. It has a return type int and accepts variable arguments.
 
-##**Return value**
+## **Return value**
 Upon successful return, printf returns the number of characters printed (excluding the null byte used to end output to strings).
 If an output error is encountered, a negative value is returned.
 
-##**Format specifiers**
+## **Format specifiers**
 Specifier type	Description
 - c	  Single character
 - s	  String of characters
 - d or i  Signed decimal integer
 - b Unsigned binary
 
-###**Example**
+### **Example**
 
 #include "holberton.h"
 
@@ -36,12 +36,12 @@ char *name = maria;
 
 			}
 
-###**Output**
+### **Output**
 She is Maria and has 43 years old
 
-##**Compilation**
+## **Compilation**
 Files are compiled this way:
 ***$ gcc -Wall -Werror -Wextra -pedantic *.c***
 
-#**Authors**
-Maria Crespo (https://twitter.com/mafe_crespo) | Jorge Ramirez (https://twitter.com/jlrogb)
+# **Authors**
+[Maria Crespo](https://twitter.com/mafe_crespo) | [Jorge Ramirez](https://twitter.com/jlrogb)
